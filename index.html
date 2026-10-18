@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cherry's Little World 🍒</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="sparkles.js" defer></script>
+</head>
+
+<body class="home-page">
+    <!-- 🎀 FLOATING SIDE DECORATIONS -->
+
+<div class="side-art side-art-left" aria-hidden="true">
+<pre>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⣀⣤⣶⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠃
+⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠃⠀
+⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀
+⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀
+⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀
+⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁
+</pre>
+</div>
+
+<div class="side-art side-art-right" aria-hidden="true">
+<pre>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⣀⣤⣶⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠃
+⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠃⠀
+⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀
+⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀
+⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀
+⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁
+</pre>
+</div>
+
+
+
+
+<!-- 🍒 LITTLE BOTTOM-LEFT DECORATION -->
+
+<div class="corner-art corner-art-bottom-left" aria-hidden="true">
+<pre>⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⣀⣤⣶⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠃
+⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠃⠀
+⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀
+⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀
+⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀
+⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁</pre>
+</div>
+
+
+
+<!-- 🎀 BOTTOM RIGHT CORNER DECORATION -->
+
+<div class="corner-art corner-art-bottom-right" aria-hidden="true">
+<pre>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠤⠬⡉⠢⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠀⠶⠦⢌⠢⠱⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠁⡆⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⣭⡙⣜⣁⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠉⣊⣡⠋⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠦⢠⣿⣿⠹⠛⣿⠇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡬⠿⢮⡤⠞⣷⣦⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣷⣿⣧⣴⡂⡶⣶⣾⡿⠂⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠳⠶⣤⡀⠀⠀⢸⣿⡏⠹⢿⣿⣵⡇⠀⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣬⣵⡦⡘⡇⠀⠀⢸⣣⢾⣿⡿⣶⣶⠀⠀
+⠀⠀⠀⢀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⠿⣏⢾⡄⠀⠏⠀⠈⠀⢐⣿⣿⠀⠀
+⢀⣦⠀⡿⠁⢀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠷⡆⣤⣽⣿⣿⣿⣧⣤⠬⢌⣷⠀⣀⣒⣛⠛⠛⠋⠁⠀⠀
+⠘⣇⠀⢧⠀⢸⠏⠀⠀⠀⠀⠀⠒⠲⠂⢀⡬⢧⡀⠛⢉⡼⠿⠿⣋⣡⠄⠀⠠⣦⠀⠈⣭⣿⣷⣄⠀⠀⠀⠀
+⠀⠙⢆⠈⢆⠀⢣⡀⠀⡰⢪⡍⢦⠀⢠⣿⣿⣁⠿⡖⠚⢿⣶⣿⣿⣁⠄⢠⣿⣧⣠⡀⣤⣿⣿⡿⠀⠀⠀⠀
+⠀⠀⠈⠑⢄⡑⠄⣈⠢⣴⣘⠒⠃⠀⠈⢻⣟⡕⠀⡿⣴⣾⣿⣿⣿⣿⣤⣿⠈⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⠑⠊⠭⠵⠶⠾⠟⠛⠋⠉⠘⣿⣷⡇⠈⠁⠘⠟⠻⢿⡿⠋⠀⠈⠛⠛⠙⠛⠛⠁⠀⠀⠀⠀</pre>
+</div>
+
+
+    <!-- MAGICAL FLOATING DECORATIONS -->
+
+    <div class="magic-decorations" aria-hidden="true">
+        <span>🍒</span>
+        <span>🎀</span>
+        <span>✧</span>
+        <span>🦋</span>
+        <span>🍒</span>
+        <span>♡</span>
+        <span>✨</span>
+        <span>🎀</span>
+        <span>✦</span>
+        <span>🍓</span>
+    </div>
+
+    <!-- WEBSITE CONTAINER -->
+
+    <div class="site-container">
+
+        <!-- HEADER -->
+
+       <header class="site-header">
+
+    <!-- GOTHIC FAIRYTALE DECORATION -->
+    <div class="gothic-decoration">
+        ‿̩͙⊱༒︎༻♱༺༒︎⊰‿̩͙
+    </div>
+
+    <div class="header-decoration">
+        ✧ ♡ 🍒 ♡ ✧
+    </div>
+
+    <h1>Cherry's Little World</h1>
+            <p class="subtitle">
+                a little fairytale hidden on the internet
+            </p>
+
+            <div class="header-decoration">
+                🎀 ✧ 🦋 ✧ 🎀
+            </div>
+
+        </header>
+
+        <!-- SCROLLING MESSAGE -->
+
+        <div class="cherry-marquee">
+            <div class="marquee-track">
+                <span>
+                    🍒 welcome to my cherry world♡
+                    🎀 stay dreamy ✧
+                    🦋 fairy dust everywhere ♡
+                    🍓 made with love ✧
+                </span>
+
+                <span aria-hidden="true">
+                    🍒 welcome to my cherry world ♡
+                    🎀 stay dreamy ✧
+                    🦋 fairy dust everywhere ♡
+                    🍓 made with love ✧
+                </span>
+            </div>
+        </div>
+
+        <!-- MAIN LAYOUT -->
+
+        <div class="home-layout">
+
+            <!-- SIDEBAR -->
+
+            <aside class="fairy-sidebar">
+
+                <div class="sidebar-title">
+                    🎀 My Little Menu 🎀
+                </div>
+
+                <nav class="fairy-nav" aria-label="Main navigation">
+
+                    <a href="index.html">
+                        🍒 Home
+                    </a>
+
+                    <a href="about.html">
+                        ♡ About Me
+                    </a>
+
+                    <a href="diary.html">
+                        💌 My Diary
+                    </a>
+
+                    <a href="gallery.html">
+                        ✧ Gallery
+                    </a>
+
+                </nav>
+<!-- 🎀 CUTE BUNNY DECORATION -->
+
+<div class="bunny-box">
+    <pre class="bunny-art">
+⠀⠀⠀⠀⢀⣤⠤⣄⠀⠀⠀⠀⣠⠤⣄⠀⠀⠀
+⠀⠀⠀⢠⠞⠀⠀⠈⢷⠀⠀⡜⠃⠀⠈⢳⠀⠀
+⠀⠀⠀⣾⠀⠀⠀⠀⠘⡇⢰⠅⠀⠀⠀⠸⡇⠀
+⠀⠀⠀⣿⠀⠀⠀⠀⠀⡇⣾⠀⠀⠀⠀⢸⠃⠀
+⠀⠀⠀⢹⡀⠀⠀⠀⠀⡇⣿⠀⠀⠀⠀⡾⠀⠀
+⠀⠀⠀⠸⡇⠀⠀⠀⠀⠷⠿⠀⠀⠀⢰⠇⠀⠀
+⠀⢀⡴⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢶⡀⠀
+⢰⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄
+⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷
+⢹⠀⠀⠀⢰⡆⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⡟
+⠈⢧⡀⠀⠀⠀⠀⠀⢄⡀⣀⠀⠀⠁⠀⠀⣸⠃
+⠀⠈⠻⢦⣀⠀⠀⠀⠚⠙⠂⠀⠀⠀⣀⡴⠋⠀
+⠀⠀⠀⠀⠈⠉⠓⠒⠲⠶⠶⠒⠒⠋⠁⠀⠀⠀
+    </pre>
+
+    <p>♡ little bunny ♡</p>
+</div>
+                <div class="sidebar-note">
+
+                    <h3>♡ Little Note ♡</h3>
+
+                    <p>
+                        Welcome, my cherries!
+                    </p>
+
+                    <p>
+                        You've discovered my
+                        enchanted corner of the internet.
+                    </p>
+
+                    <p>🍒 ✧ 🎀</p>
+
+                </div>
+
+                <div class="sidebar-status">
+
+                    <h3>💌 Dear Visitor...</h3>
+<p>you've found my little hideaway ♡</p>
+<p>stay a while, explore a little</p>
+<p>and don't forget your fairy dust ✧</p>
+
+                </div>
+
+            </aside>
+
+            <!-- MAIN CONTENT -->
+
+            <main class="home-content">
+
+                <section class="welcome-card">
+
+                    <div class="card-decoration">
+                        ✧ 🍒 ✧
+                    </div>
+
+                    <h2>Welcome to My Fairytale ♡</h2>
+                    <div class="welcome-gif">
+    <img src="Images/fairy.gif" alt="Cute animated fairy">
+</div>
+
+                    <p>
+                        Hiii, little visitor!
+                    </p>
+
+                    <p>
+                        Welcome to Cherry's Little World,
+                        a magical place filled with
+                        cherries, ribbons, sparkles,
+                        cute cats, and little dreams.
+                    </p>
+
+                    <p>
+                        This is my tiny piece of the internet,
+                        decorated with everything I love.
+                    </p>
+
+                    <div class="welcome-emojis">
+                        🍒 🎀 🦋 🍓 ✨
+                    </div>
+
+                    <a href="about.html" class="fairy-button">
+                        Get to Know Me ♡
+                    </a>
+
+                </section>
+
+                <!-- LITTLE FEATURE CARDS -->
+
+                <div class="home-cards">
+
+                    <section class="mini-card">
+
+                        <h3>🎀 My Little Diary</h3>
+
+                        <p>
+                            Little thoughts,
+                            memories and dreams.
+                        </p>
+
+                        <a href="diary.html">
+                            Read my diary →
+                        </a>
+
+                    </section>
+
+                    <section class="mini-card">
+
+                        <h3>🍒 My Gallery</h3>
+
+                        <p>
+                            A collection of pretty
+                            little things.
+                        </p>
+
+                        <a href="gallery.html">
+                            Explore gallery →
+                        </a>
+
+                    </section>
+
+                </div>
+
+                <!-- CUTE QUOTE -->
+
+                <section class="quote-card">
+
+                    <p class="quote-stars">✧ ♡ ✧</p>
+
+                    <h2>Little Reminder</h2>
+
+                    <p>
+                        "Every little dream deserves
+                        a little magic."
+                    </p>
+
+                    <p>🦋 🍒 🎀</p>
+
+                </section>
+
+            </main>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer class="site-footer">
+
+            <p>
+                🍒 Made with fairy dust & love by Cherry ♡
+            </p>
+
+            <p>
+                ✧ Cherry's Little World © 2026 ✧
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

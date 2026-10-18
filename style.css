@@ -1,0 +1,1618 @@
+/* =========================================
+   🍒 CHERRY'S LITTLE WORLD
+   FAIRYTALE × Y2K × COQUETTE × GEN Z
+========================================= */
+
+
+/* COLOUR PALETTE */
+
+:root {
+    --cherry: #650b20;
+    --wine: #8b1538;
+    --rose: #d97791;
+    --pink: #f4b6c5;
+    --blush: #fff0f4;
+    --cream: #fffaf8;
+    --white: #ffffff;
+}
+
+
+/* GLOBAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffe0eb 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #ffd6e3 0%,
+            transparent 35%
+        ),
+        #fff0f4;
+
+    color: var(--cherry);
+    font-family: Georgia, serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   🍒 CHERRY EMOJI CURSOR
+========================================= */
+
+@media (pointer: fine) {
+
+    body,
+    body * {
+        cursor: none !important;
+    }
+
+}
+
+.cherry-cursor {
+    position: fixed;
+
+    left: -100px;
+    top: -100px;
+
+    font-size: 29px;
+    line-height: 1;
+
+    transform: translate(-35%, -35%);
+
+    pointer-events: none;
+
+    z-index: 999999;
+
+    opacity: 0;
+
+    transition: opacity 0.15s;
+}
+
+
+/* =========================================
+   ✨ CURSOR SPARKLES
+========================================= */
+
+.cursor-sparkle {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 999998;
+
+    font-size: 19px;
+
+    transform: translate(-50%, -50%);
+
+    animation: sparkleDisappear 0.8s ease-out forwards;
+}
+
+@keyframes sparkleDisappear {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--drift)),
+                -65px
+            )
+            scale(0.2);
+    }
+
+}
+
+
+/* =========================================
+   🎀 FLOATING DECORATIONS
+========================================= */
+
+.magic-decorations {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.magic-decorations span {
+    position: absolute;
+
+    font-size: 27px;
+
+    opacity: 0.8;
+
+    animation: fairyFloat 5s ease-in-out infinite;
+}
+
+.magic-decorations span:nth-child(1) {
+    top: 12%;
+    left: 4%;
+}
+
+.magic-decorations span:nth-child(2) {
+    top: 30%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+.magic-decorations span:nth-child(3) {
+    top: 55%;
+    left: 6%;
+    animation-delay: 2s;
+}
+
+.magic-decorations span:nth-child(4) {
+    bottom: 15%;
+    right: 8%;
+    animation-delay: 0.5s;
+}
+
+.magic-decorations span:nth-child(5) {
+    bottom: 8%;
+    left: 12%;
+    animation-delay: 1.5s;
+}
+
+.magic-decorations span:nth-child(6) {
+    top: 15%;
+    right: 15%;
+    animation-delay: 2.5s;
+}
+
+.magic-decorations span:nth-child(7) {
+    top: 70%;
+    right: 4%;
+    animation-delay: 3s;
+}
+
+.magic-decorations span:nth-child(8) {
+    bottom: 30%;
+    left: 3%;
+    animation-delay: 1.8s;
+}
+
+.magic-decorations span:nth-child(9) {
+    top: 45%;
+    right: 3%;
+    animation-delay: 0.8s;
+}
+
+.magic-decorations span:nth-child(10) {
+    top: 80%;
+    left: 25%;
+    animation-delay: 2.2s;
+}
+
+@keyframes fairyFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-8deg);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(8deg);
+    }
+
+}
+
+
+/* =========================================
+   🏰 HOMEPAGE CONTAINER
+========================================= */
+
+.site-container {
+    width: min(1100px, calc(100% - 30px));
+
+    margin: 35px auto;
+
+    background: var(--cream);
+
+    border: 4px double var(--wine);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow:
+        0 0 25px #f4b6c580,
+        0 15px 35px #650b2020;
+
+    animation: websiteEntrance 0.9s ease-out;
+}
+
+@keyframes websiteEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   🎀 HOMEPAGE HEADER
+========================================= */
+
+.site-header {
+    background:
+        linear-gradient(
+            135deg,
+            #650b20,
+            #981b39,
+            #650b20
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.site-header h1 {
+    font-size: clamp(30px, 5vw, 48px);
+
+    margin: 15px 0;
+
+    text-shadow:
+        3px 3px #b84c6c,
+        0 0 15px #ff9eb580;
+
+    animation: titleFloat 3s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #ffe0e9;
+}
+
+.header-decoration {
+    font-size: 23px;
+
+    letter-spacing: 8px;
+
+    animation: decorationGlow 3s ease-in-out infinite;
+}
+
+@keyframes decorationGlow {
+
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* =========================================
+   🍒 SCROLLING MARQUEE
+========================================= */
+
+.cherry-marquee {
+    background: #f8d4df;
+
+    overflow: hidden;
+
+    border-top: 2px solid var(--wine);
+    border-bottom: 2px solid var(--wine);
+
+    padding: 12px 0;
+}
+
+.marquee-track {
+    display: flex;
+
+    width: max-content;
+
+    animation: marqueeMove 25s linear infinite;
+}
+
+.marquee-track span {
+    flex-shrink: 0;
+
+    padding-right: 50px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+@keyframes marqueeMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================
+   🦋 HOMEPAGE LAYOUT
+========================================= */
+
+.home-layout {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding: 25px;
+}
+
+
+/* =========================================
+   🎀 SIDEBAR
+========================================= */
+
+.fairy-sidebar {
+    width: 230px;
+
+    flex-shrink: 0;
+
+    background: #fff0f4;
+
+    border: 3px double var(--wine);
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    animation: sidebarEntrance 0.9s ease-out;
+}
+
+@keyframes sidebarEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.sidebar-title {
+    background: var(--cherry);
+
+    color: white;
+
+    padding: 13px 5px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* NAVIGATION BUTTONS */
+
+.fairy-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.fairy-nav a {
+    display: block;
+
+    background: var(--wine);
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+.fairy-nav a:hover {
+    background: var(--rose);
+
+    color: var(--cherry);
+
+    transform:
+        translateX(7px)
+        rotate(-2deg);
+
+    box-shadow: 4px 4px var(--pink);
+}
+
+
+/* SIDEBAR BOXES */
+
+.sidebar-note,
+.sidebar-status {
+    margin-top: 20px;
+
+    padding: 15px 10px;
+
+    background: white;
+
+    border: 2px dashed var(--rose);
+
+    border-radius: 12px;
+}
+
+.sidebar-note h3,
+.sidebar-status h3 {
+    font-size: 16px;
+}
+
+.sidebar-note p,
+.sidebar-status p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   🍒 HOMEPAGE CONTENT
+========================================= */
+
+.home-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.welcome-card,
+.quote-card,
+.mini-card {
+    background: white;
+
+    border: 3px double var(--wine);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 5px 5px 0 var(--pink);
+
+    transition: 0.3s;
+}
+
+.welcome-card:hover,
+.quote-card:hover,
+.mini-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 8px 8px 0 var(--rose);
+}
+
+.welcome-card h2,
+.quote-card h2 {
+    color: var(--wine);
+
+    font-size: 27px;
+}
+
+.welcome-card p {
+    line-height: 1.8;
+}
+
+.card-decoration {
+    font-size: 25px;
+
+    animation: fairyFloat 4s ease-in-out infinite;
+}
+
+.welcome-emojis {
+    font-size: 26px;
+
+    margin: 20px 0;
+
+    animation: decorationGlow 3s infinite;
+}
+
+
+/* BUTTON */
+
+.fairy-button {
+    display: inline-block;
+
+    background: var(--wine);
+
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.fairy-button:hover {
+    background: var(--rose);
+
+    color: var(--cherry);
+
+    transform: scale(1.07);
+}
+
+
+/* MINI CARDS */
+
+.home-cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.mini-card {
+    padding: 20px;
+}
+
+.mini-card h3 {
+    color: var(--wine);
+}
+
+.mini-card p {
+    line-height: 1.6;
+}
+
+.mini-card a {
+    color: var(--wine);
+    font-weight: bold;
+}
+
+
+/* QUOTE */
+
+.quote-card {
+    margin-top: 25px;
+}
+
+.quote-stars {
+    font-size: 25px;
+    color: var(--rose);
+}
+
+
+/* =========================================
+   🎀 FOOTER
+========================================= */
+
+.site-footer,
+.fullpage-footer {
+    background: var(--cherry);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 22px;
+
+    animation: footerGlow 5s ease-in-out infinite;
+}
+
+@keyframes footerGlow {
+
+    0%, 100% {
+        background: #650b20;
+    }
+
+    50% {
+        background: #981b39;
+    }
+
+}
+
+
+/* =========================================
+   🦋 FULL-PAGE ABOUT & GALLERY HEADERS
+========================================= */
+
+.fullpage-header {
+    background:
+        linear-gradient(
+            135deg,
+            #650b20,
+            #981b39,
+            #650b20
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 100px 20px 65px;
+
+    border-bottom: 5px double var(--pink);
+}
+
+.fullpage-header h1 {
+    font-size: clamp(35px, 6vw, 65px);
+
+    margin: 20px 0;
+
+    text-shadow: 3px 3px #b84c6c;
+
+    animation: titleFloat 3s ease-in-out infinite;
+}
+
+.fullpage-header p {
+    color: #ffe1e9;
+
+    font-size: 17px;
+}
+
+.hero-emojis {
+    font-size: 30px;
+
+    margin-top: 25px;
+
+    animation: fairyFloat 4s infinite;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 100;
+
+    background: white;
+
+    color: var(--wine);
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow: 4px 4px var(--rose);
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    transform: scale(1.08);
+
+    background: var(--pink);
+}
+
+
+/* =========================================
+   🍒 ABOUT ME PAGE
+========================================= */
+
+.fullpage-content {
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 0 20px;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.fairy-card {
+    background: var(--cream);
+
+    border: 3px double var(--wine);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow: 6px 6px 0 var(--pink);
+
+    transition: 0.3s;
+
+    animation: websiteEntrance 0.8s ease-out;
+}
+
+.fairy-card:hover {
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+
+    box-shadow: 9px 9px 0 var(--rose);
+}
+
+.fairy-card h2 {
+    color: var(--wine);
+
+    border-bottom: 2px dashed var(--pink);
+
+    padding-bottom: 15px;
+}
+
+.fairy-card p {
+    line-height: 1.8;
+}
+
+
+/* INTEREST GRID */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.interest-grid div {
+    background: #f8d6df;
+
+    padding: 14px 8px;
+
+    border: 2px solid var(--rose);
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.interest-grid div:hover {
+    background: var(--wine);
+
+    color: white;
+
+    transform:
+        scale(1.05)
+        rotate(-3deg);
+}
+
+
+/* FACTS */
+
+.facts-list {
+    background: #fff0f4;
+
+    border: 2px dashed var(--rose);
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   🎀 GALLERY PAGE
+========================================= */
+
+.gallery-content {
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+.gallery-content h2 {
+    color: var(--wine);
+
+    font-size: 30px;
+}
+
+.pinterest-grid {
+    columns: 3;
+
+    column-gap: 22px;
+
+    margin-top: 35px;
+}
+
+.photo-card {
+    break-inside: avoid;
+
+    margin-bottom: 22px;
+
+    background: var(--cream);
+
+    border: 3px double var(--wine);
+
+    border-radius: 18px;
+
+    padding: 12px;
+
+    box-shadow: 5px 5px 0 var(--pink);
+
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform:
+        translateY(-8px)
+        rotate(2deg);
+
+    box-shadow: 8px 8px 0 var(--rose);
+}
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 12px;
+}
+
+.photo-card p {
+    font-size: 15px;
+
+    margin: 15px 0 5px;
+}
+
+
+/* =========================================
+   📱 RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 800px) {
+
+    .home-layout {
+        flex-direction: column;
+    }
+
+    .fairy-sidebar {
+        width: 100%;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pinterest-grid {
+        columns: 2;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .site-container {
+        width: calc(100% - 16px);
+
+        margin: 8px auto;
+    }
+
+    .home-layout {
+        padding: 15px;
+    }
+
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .pinterest-grid {
+        columns: 1;
+    }
+
+    .fullpage-header {
+        padding-top: 110px;
+    }
+
+    .back-button {
+        font-size: 12px;
+
+        padding: 10px 14px;
+    }
+
+    .welcome-card {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   ♡ REDUCED MOTION SUPPORT
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .marquee-track {
+        animation: none;
+    }
+
+    .cursor-sparkle {
+        display: none;
+    }
+
+}
+
+
+
+/* =========================================
+   💌 CHERRY'S SECRET FAIRYTALE DIARY
+========================================= */
+
+
+/* DIARY BACKGROUND */
+
+body.diary-page {
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            #ffe0eb,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            #ffd6e3,
+            transparent 40%
+        ),
+        #fff0f4;
+
+    min-height: 100vh;
+}
+
+
+/* DIARY HEADER */
+
+.diary-header {
+    background: linear-gradient(
+        135deg,
+        #650b20,
+        #a12b50,
+        #650b20
+    );
+}
+
+
+/* MAIN DIARY CONTAINER */
+
+.diary-container {
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    padding: 0 20px;
+}
+
+
+/* DIARY INTRODUCTION */
+
+.diary-intro {
+    text-align: center;
+
+    margin-bottom: 45px;
+
+    animation: diaryAppear 1s ease-out;
+}
+
+.diary-intro h2 {
+    font-size: 35px;
+
+    color: #8b1538;
+
+    text-shadow: 2px 2px #f4b6c5;
+}
+
+.diary-intro p {
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* VINTAGE DIARY PAPER */
+
+.diary-paper {
+    position: relative;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #fffaf8 0px,
+            #fffaf8 34px,
+            #f8dce4 35px
+        );
+
+    border: 3px double #8b1538;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        8px 8px 0 #f4b6c5,
+        0 10px 25px #650b2015;
+
+    transition: 0.4s;
+
+    animation: diaryAppear 0.9s ease-out;
+}
+
+
+/* PAPER HOVER ANIMATION */
+
+.diary-paper:hover {
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+    box-shadow:
+        12px 12px 0 #d97791,
+        0 15px 30px #650b2020;
+}
+
+
+/* DIARY DATE */
+
+.diary-date {
+    display: inline-block;
+
+    background: #8b1538;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* DIARY TITLES */
+
+.diary-paper h2 {
+    color: #8b1538;
+
+    font-size: 27px;
+
+    border-bottom: 2px dashed #d97791;
+
+    padding-bottom: 15px;
+}
+
+
+/* DIARY WRITING */
+
+.diary-paper p {
+    font-size: 16px;
+
+    color: #650b20;
+
+    line-height: 2;
+
+    margin-bottom: 18px;
+}
+
+
+/* SIGNATURE */
+
+.diary-signature {
+    font-style: italic;
+
+    font-size: 18px !important;
+
+    color: #a12b50 !important;
+
+    text-align: right;
+
+    margin-top: 25px;
+}
+
+
+/* CUTE STICKERS */
+
+.diary-stickers {
+    position: absolute;
+
+    bottom: 15px;
+    left: 20px;
+
+    font-size: 23px;
+
+    animation: stickerFloat 3s ease-in-out infinite;
+}
+
+@keyframes stickerFloat {
+
+    0%, 100% {
+        transform: rotate(-8deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(8deg) translateY(-7px);
+    }
+
+}
+
+
+/* DIARY ENDING */
+
+.diary-ending {
+    background: #fffaf8;
+
+    border: 3px double #8b1538;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow: 6px 6px 0 #f4b6c5;
+
+    margin-top: 50px;
+
+    animation: diaryAppear 1s ease-out;
+}
+
+.diary-ending h2 {
+    color: #8b1538;
+
+    font-size: 28px;
+}
+
+
+/* DIARY ENTRANCE ANIMATION */
+
+@keyframes diaryAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* MOBILE FRIENDLY */
+
+@media (max-width: 600px) {
+
+    .diary-container {
+        padding: 0 15px;
+    }
+
+    .diary-paper {
+        padding: 25px;
+    }
+
+    .diary-paper h2 {
+        font-size: 22px;
+    }
+
+    .diary-intro h2 {
+        font-size: 28px;
+    }
+
+    .diary-stickers {
+        position: static;
+
+        margin-top: 20px;
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .diary-intro,
+    .diary-paper,
+    .diary-ending,
+    .diary-stickers {
+        animation: none;
+    }
+
+    .diary-paper {
+        transition: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* 🍒 CUTE ANIMATED WELCOME GIF */
+
+.welcome-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px auto;
+}
+
+.welcome-gif img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 15px;
+
+    animation: gifFloat 3s ease-in-out infinite;
+}
+
+/* ✨ FLOATING ANIMATION */
+
+@keyframes gifFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+
+/* 🍒 DARK RED GLOWING GIF BORDER */
+
+.welcome-gif img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+
+    border: 3px solid #650b20;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 10px #650b20,
+        0 0 20px #8b1538,
+        0 0 35px #650b20;
+
+    animation: cherryGlow 3s ease-in-out infinite;
+}
+
+/* ✨ ANIMATED DARK RED GLOW */
+
+@keyframes cherryGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 8px #650b20,
+            0 0 15px #8b1538,
+            0 0 25px #650b20;
+
+        transform: translateY(0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 15px #8b1538,
+            0 0 30px #650b20,
+            0 0 50px #981b39;
+
+        transform: translateY(-8px);
+    }
+}
+
+
+/* 🖤 BIG GOTHIC FAIRYTALE DECORATION */
+
+.gothic-decoration {
+    width: 100%;
+    text-align: center;
+
+    font-size: clamp(35px, 6vw, 85px);
+    color: #ffd6e0;
+
+    letter-spacing: 5px;
+    white-space: nowrap;
+
+    margin: 0 auto 20px;
+
+    text-shadow:
+        0 0 10px #ff9eb5,
+        0 0 20px #d97791,
+        0 0 40px #8b1538;
+
+    animation: gothicGlow 3s ease-in-out infinite;
+}
+
+/* 📱 ADJUST SIZE ON SMALL SCREENS */
+
+@media (max-width: 600px) {
+    .gothic-decoration {
+        font-size: clamp(20px, 5vw, 35px);
+        letter-spacing: 0;
+    }
+}
+
+
+
+
+
+/* 🍒 BOTTOM LEFT FAIRYTALE DECORATION */
+
+.corner-art-bottom-left {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+
+    z-index: 0;
+    pointer-events: none;
+
+    color: #8b1538;
+    opacity: 0.8;
+
+    animation: littleCornerFloat 4s ease-in-out infinite;
+}
+
+.corner-art-bottom-left pre {
+    font-family: "Noto Sans Mono", "DejaVu Sans Mono", monospace;
+    font-size: 4px;
+    line-height: 1.2;
+    white-space: pre;
+    margin: 0;
+}
+
+@keyframes littleCornerFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Hide on smaller screens */
+
+@media (max-width: 1100px) {
+    .corner-art-bottom-left {
+        display: none;
+    }
+}
+
+/* Reduce animation when requested */
+
+@media (prefers-reduced-motion: reduce) {
+    .corner-art-bottom-left {
+        animation: none;
+    }
+}
+
+
+/* 🎀 ANIMATED SIDE DECORATIONS */
+
+.side-art-left {
+    animation: cuteSideFloat 4s ease-in-out infinite;
+}
+
+.side-art-right {
+    animation: cuteSideFloatRight 4s ease-in-out infinite;
+}
+
+/* ✨ LEFT DECORATION FLOATING */
+
+@keyframes cuteSideFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(3deg);
+    }
+}
+
+/* ✨ RIGHT DECORATION FLOATING */
+
+@keyframes cuteSideFloatRight {
+    0%, 100% {
+        transform: scaleX(-1) translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: scaleX(-1) translateY(-18px) rotate(3deg);
+    }
+}
+
+/* ♡ GENTLE ANIMATION */
+
+.side-art {
+    transition: opacity 0.3s ease;
+}
+
+/* 📱 ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .side-art-left,
+    .side-art-right {
+        animation: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* 🎀 BOTTOM RIGHT ASCII DECORATION */
+
+.corner-art-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+
+    z-index: 0;
+    pointer-events: none;
+
+    color: #8b1538;
+    opacity: 0.85;
+
+    animation: rightCornerFloat 5s ease-in-out infinite;
+}
+
+/* 🎀 BIG BOTTOM-RIGHT DECORATION */
+
+.corner-art-bottom-right pre {
+    font-family: "Noto Sans Mono", "DejaVu Sans Mono", monospace;
+
+    font-size: 9px;
+    line-height: 1.2;
+
+    white-space: pre;
+    margin: 0;
+}
+
+
+/* ✨ FLOATING ANIMATION */
+
+@keyframes rightCornerFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+/* 📱 HIDE DECORATION ON SMALL SCREENS */
+
+@media (max-width: 1100px) {
+    .corner-art-bottom-right {
+        display: none;
+    }
+}
+
+/* ♡ ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .corner-art-bottom-right {
+        animation: none;
+    }
+}
